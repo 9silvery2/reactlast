@@ -1,0 +1,48 @@
+// main page
+#mainCont {
+  height: 100vh;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main__cont {
+  color: #fff;
+  font-size: 10vw;
+  line-height: 0.85;
+  letter-spacing: -0.0275em;
+  transition: all 2s;
+  font-family: "Saol Display Regular";
+  text-transform: uppercase;
+}
+
+.main__cont > div {
+  opacity: 0;
+  transform: translateY(100px);
+}
+ 
+// about page
+#aboutCont {
+  background-color: #fff;
+}
+.about__cont {}
+
+// script page
+#scriptCont {}
+.script__cont {}
+
+// portfolio page
+#portCont {}
+.port__cont {}
+
+// reference page
+#referCont {}
+.refer__cont {}
+
+// youtube page
+#youCont {}
+.you__cont {}
+
+// contact page
+#contactCont {}
+.contact__cont {}

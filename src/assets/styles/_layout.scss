@@ -1,0 +1,224 @@
+// body
+body.black {
+  background: #000;
+}
+body.light {
+  background: #f0eeeb;
+}
+// header
+#header {
+  overflow: hidden;
+  z-index: 1200;
+  position: fixed;
+  left: 0;
+  top: 0%;
+  width: 100%;
+  color: #fff;
+  border-bottom: 1px solid #2e2e30;
+  display: flex;
+  align-items: center;
+  font-family: "Rajdhani", "Chosunilbo_myungjo";
+  font-weight: 500;
+  background: #000;
+  top: -100%;
+}
+.header__port {
+  flex: 1 1 35%;
+  padding-left: 1rem;
+}
+.header__port a {
+  position: relative;
+  padding-left: 10px;
+}
+.header__port a::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  top: 3px;
+  border-radius: 50%;
+}
+.header__port a::after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  top: 11px;
+  border-radius: 50%;
+}
+.header__logo {
+  flex: 1 1 30%;
+  text-align: center;
+  margin: 1.5rem;
+}
+.header__logo a {
+  font-family: "Playfair Display";
+  font-size: 1.8rem;
+  line-height: 1;
+}
+.header__menu {
+  flex: 1 1 35%;
+  text-align: right;
+  padding-right: 1rem;
+}
+.header__menu .rang {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  margin-top: 5px;
+}
+.header__menu .rang::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  box-shadow: 0 12px 0 #fff;
+}
+.header__menu .rang::after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  box-shadow: 0 12px 0 #fff;
+}
+.header__nav {
+  z-index: 1200;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+}
+.header__nav li a {
+  font-family: "Saol Display Regular", "Chosunilbo_myungjo";
+  font-size: 5vw;
+  line-height: 1.2;
+  font-weight: 100;
+}
+.header__nav ul:last-child li {
+  display: inline-block;
+  margin-top: 20px;
+}
+.header__nav ul:last-child li a {
+  font-family: "Chosunilbo_myungjo";
+  font-size: 16px;
+  line-height: 1;
+  padding: 10px;
+}
+.header__nav.demo {
+  position: absolute;
+  right: 60px;
+  top: 20px;
+  z-index: 1300;
+  left: auto;
+  transform: none;
+  visibility: visible;
+  text-align: right;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.header__nav.demo li {
+  display: inline;
+  margin-top: 0;
+}
+.header__nav.demo li a {
+  transform: translateY(0);
+  font-family: "Rajdhani", "Chosunilbo_myungjo";
+  font-size: 16px;
+  font-weight: 400;
+  padding: 2px 5px;
+}
+.header__nav.demo ul:last-child li {
+  margin-top: 0;
+}
+.header__nav.demo ul:last-child li a {
+  padding: 2px 5px;
+}
+
+// header light
+.light #header {
+  background: #F0EEEB;
+  border-bottom: 1px solid #DAD8D1;
+}
+.light .header__port a {
+  color: #000;
+}
+.light .header__logo a {
+  color: #000;
+}
+.light .header__nav.demo li a {
+  color: #000;
+}
+.light .header__menu a::before {
+  background: #000;
+  box-shadow: 0 12px 0 #000;
+}
+.light .header__menu a::after {
+  background: #000;
+  box-shadow: 0 12px 0 #000;
+}
+.light .header__port a::before {
+  background: #000;
+}
+.light .header__port a::after {
+  background: #000;
+}
+
+//footer
+#footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 1200;
+  width: 100%;
+  color: #fff;
+  border-top: 1px solid #2e2e30;
+  font-family: "Rajdhani", "Chosunilbo_myungjo";
+  font-weight: 500;
+  background: #000;
+  display: flex;
+  align-items: center;
+  bottom: -100%;
+  div {
+    text-align: center;
+    padding: 30px;
+    h4,
+    p,
+    ul {
+      display: inline-block;
+    }
+    h4 {
+      font-family: "Rajdhani", "Chosunilbo_myungjo";
+      font-weight: 500;
+      opacity: 0.6;
+      padding: 0 10px;
+    }
+  }
+  div:nth-child(1) {
+    flex: 1 1 25%;
+    border-right: 1px solid #2e2e30;
+  }
+  div:nth-child(2) {
+    flex: 1 1 20%;
+    border-right: 1px solid #2e2e30;
+  }
+  div:nth-child(3) {
+    flex: 1 1 55%;
+    li {
+      display: inline-block;
+      padding: 0 10px;
+    }
+  }
+}
