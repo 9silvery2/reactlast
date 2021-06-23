@@ -1,7 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Quattrocento+Sans);
-body {
-  background: #000;
-}
+
 #loading.loading-active {
   position: fixed;
   top: 0;
@@ -12,6 +10,13 @@ body {
   z-index: 9999;
   opacity: 1;
 }
+#loading.loading-active.light {
+  background: #F0EEEB;
+}
+.loading-active.light .loading-text span {
+  color: #000;
+}
+
 #loading {
   opacity: 0;
   transition: all 1.6s;

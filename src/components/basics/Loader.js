@@ -1,7 +1,7 @@
 import React from "react";
-function Loader() {
+function Loader(props) {
   return (
-    <div id="loading" className="loading-active">
+    <div id="loading" className={`loading-active ${props.color}`}>
       <div className="loading-text">
         <span className="loading-text-words">L</span>
         <span className="loading-text-words">O</span>

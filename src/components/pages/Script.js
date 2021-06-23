@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../basics/Header";
 import Layout from "../basics/Layout";
-import Contact from "../basics/Contact";
+import Contactinfo from "../basics/Contactinfo";
 import Loader from "../basics/Loader";
 
 class Script extends React.Component {
@@ -27,7 +27,7 @@ class Script extends React.Component {
             <Layout>
               <div>Script</div>
             </Layout>
-            <Contact />
+            <Contactinfo />
           </>
         )}
       </div>
