@@ -1,9 +1,10 @@
 import React from "react";
 import Header from "../basics/Header";
 import Layout from "../basics/Layout";
-import Contactinfo from "../basics/Contactinfo";
 import Loader from "../basics/Loader";
+import Contactinfo from "../basics/Contactinfo";
 import WrapTitle from "../basics/WrapTitle";
+import ReferInfo from "../pages/ReferInfo";
 import { gsap } from "gsap";
 import axios from "axios";
 
@@ -39,38 +40,31 @@ class Reference extends React.Component {
       delay: 1,
     });
   };
-
   getReference = async () => {
     const {
       data: {
         data: { htmlRefer },
       },
     } = await axios.get("https://webstoryboy.github.io/dothome1/refer.json");
-    this.setState({ refers: htmlRefer });
-    // console.log(htmlRefer);
+    this.setState({ htmlRefer, isLoading: false });
+    console.log(htmlRefer);
+    this.startAnimation();
   };
-
   getSite = () => {
     setTimeout(() => {
-      console.log("두번째 시작");
-      this.setState({ isLoading: false });
-      this.startAnimation();
       this.getReference();
     }, 1600);
   };
-
   componentDidMount() {
     setTimeout(() => {
-      console.log("첫번째 시작");
       document.getElementById("loading").classList.remove("loading-active");
       document.querySelector("body").classList.remove("black");
       document.querySelector("body").classList.add("light");
       this.getSite();
     }, 2000);
   }
-
   render() {
-    const { isLoading } = this.state;
+    const { isLoading, htmlRefer } = this.state;
     return (
       <div id="wrap">
         {isLoading ? (
@@ -81,8 +75,24 @@ class Reference extends React.Component {
             <Layout>
               <section id="referCont">
                 <div className="container">
-                  <WrapTitle text={["reference", "book"]} />
-                  <div className="refer__cont"></div>
+                  <WrapTitle text={["Reference", "book"]} />
+                  <div className="refer__cont">
+                    <div className="refer__table">
+                      <h3>HTML</h3>
+                      <ul>
+                        {htmlRefer.map((refer) => (
+                          <ReferInfo
+                            key={refer.id}
+                            id={refer.id}
+                            title={refer.title}
+                            desc={refer.desc}
+                            category={refer.category}
+                            property={refer.property}
+                          />
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </section>
             </Layout>
@@ -93,5 +103,4 @@ class Reference extends React.Component {
     );
   }
 }
-
 export default Reference;

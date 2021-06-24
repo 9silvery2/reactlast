@@ -91,10 +91,77 @@
   background-color: #f0eeeb;
 }
 .refer__cont {
-  padding-bottom: 200px;
   opacity: 0;
-  transform: translateY(100px);
+  transform: translateY(50px);
+  padding-bottom: 200px;
 }
+.refer__cont .refer-title li {
+  display: inline;
+  font-family: "Rajdhani";
+}
+.refer__cont .refer-title li a {
+  font-size: 1.2rem;
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  border: 1px solid #222;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  margin-right: 10px;
+}
+.refer__cont .refer-title li.active a {
+  background: #000;
+  color: #fff;
+}
+.refer__cont .refer__table {
+  border-bottom: 2px solid #000;
+  margin-top: 1.2rem;
+}
+.refer__cont .refer__table h3 {
+  padding-bottom: 10px;
+}
+.refer__cont .refer__table li {
+  margin: 0;
+  list-style: none;
+  border-top: 1px solid #000;
+  position: relative;
+  transition: all 0.3s;
+}
+.refer__cont .refer__table li:hover {
+  background: rgba(0, 0, 0, 0.081);
+}
+.refer__cont .refer__table li span {
+  display: inline-block;
+  padding: 25px 10px;
+  font-size: 14px;
+  font-family: "S-CoreDream-3Light";
+  box-sizing: border-box;
+}
+.refer__cont .refer__table li span.alpha {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.refer__cont .refer__table li span.attr {
+  padding-left: 10%;
+  width: 35%;
+}
+.refer__cont .refer__table li span.desc {
+  width: 64.5%;
+}
+
+// referDetail page
+.refer__detail {
+  font-family: "S-CoreDream-3Light";
+  
+  h3 {
+    padding-bottom: 10px;
+    font-size: 30px;
+  }
+  div {
+    margin: 2rem;
+  }
+}
+
 
 // youtube page
 #youCont {}
